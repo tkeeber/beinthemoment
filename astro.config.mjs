@@ -6,7 +6,8 @@ import lit from "@astrojs/lit";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://tkeeber.github.io/beinthemoment",
+  site: "https://tkeeber.github.io",
+  base: 'beinthemoment',
   sitemap: true, // Generate sitemap (set to "false" to disable)
   integrations: [sitemap(), mdx(), lit(), icon()], // Add renderers to the config
 });

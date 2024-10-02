@@ -11,10 +11,10 @@ const selectOptions = [
 
 ---
 
-<form name="Contact Form" method="POST" action="/company/contact-thank-you">
+<form action="https://formsubmit.co/kimberley@beinthemoment.co.uk" method="POST">
   <FormInput type="text" label="Name" name="Name" placeholder="" />
   <FormInput type="email" label="Email" name="Email" placeholder="hello@example.com" />
-  <FormSelect label="Which class are you interested in?" options={selectOptions} />
+  <FormSelect label="Which class are you interested in?" name="Class_Option" options={selectOptions} />
   <FormTextarea label="Message" name="Message" placeholder="Your message here..." />
   <Button>Submit</Button>
 </form>

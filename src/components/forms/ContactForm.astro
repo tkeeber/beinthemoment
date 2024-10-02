@@ -2,17 +2,19 @@
 import { Button, FormInput, FormSelect, FormTextarea } from '@components/odyssey-theme';
 
 const selectOptions = [
-  "Google Search",
-  "Social Media",
-  "Email",
+  "Monday Lunch time 12.45 until 1.30",
+  "Monday Evening 7.30 until 8.45",
+  "One to One session",
+  "Other",
+  "None",
 ]
 
 ---
 
-<form name="Contact Form" method="POST" action="/contact-thank-you">
-  <FormInput type="text" label="Name" name="Name" placeholder="John Doe" />
+<form name="Contact Form" method="POST" action="/company/contact-thank-you">
+  <FormInput type="text" label="Name" name="Name" placeholder="" />
   <FormInput type="email" label="Email" name="Email" placeholder="hello@example.com" />
-  <FormSelect label="How Did You Hear About Us?" options={selectOptions} />
+  <FormSelect label="Which class are you interested in?" options={selectOptions} />
   <FormTextarea label="Message" name="Message" placeholder="Your message here..." />
   <Button>Submit</Button>
 </form>

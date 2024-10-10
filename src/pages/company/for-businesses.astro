@@ -1,0 +1,87 @@
+---
+import { TextSection,ThreeColumnTextSection,Button, TextAndImageHero, StickyTextImageSection } from "@components/odyssey-theme";
+import Layout from "../../layouts/Page.astro";
+import HeroSection from "../../components/sections/heros/HeroSection.astro";
+import { Icon } from "astro-icon/components";
+import TextAndImageHero from "../../components/sections/heros/TextAndImageHero.astro";
+
+const seo = {
+  title: "For Business | Be In The Moment",
+  description: "For Business",
+};
+---
+
+<Layout {seo}>
+  <HeroSection>
+    <div slot="text-container">
+      <h1>Mindfulness For Business</h1>
+      <p>  Mindfulness has proven to be a powerful tool not only in personal well-being
+      but also in the workplace. </p>
+    </div>
+    <div slot="btns-container">
+      <Button href="/company/contact" customIcon
+        >Find out more <Fragment slot="icon">
+          <Icon name="ic:baseline-chevron-right" />
+        </Fragment></Button
+      >
+    </div>
+    <picture slot="image-container">
+      <img
+        src="/assets/images/mindfulness-in-business.png"
+        alt="beinthemoment"
+        id="business-hero-image"
+      />
+    </picture>
+  </HeroSection>
+
+  <StickyTextImageSection>
+    <div slot="text-container">
+      <h1>For Businesses</h1>
+      Mindfulness has proven to be a powerful tool not only in personal well-being
+      but also in the workplace. 
+      <br>In a fast-paced business environment, practising mindfulness can lead to <b>improved focus, reduced stress, and better decision-making.</b>
+      <p>
+      <p>Our classes can help companies can build a culture of awareness and emotional intelligence, resulting in higher employee engagement, reduced burnout, and increased overall job satisfaction.
+      </p>
+      <p><b>Take a look at our options below</b></p>
+       We are flexible to cater for you needs, so please reach out to us for tailored packages.
+      </p>
+      
+    </div>
+     <picture slot="image-container">
+      <img
+        src="/assets/images/mindfulness-in-business-2.png"
+        alt="Astro Odyssey"
+        loading="lazy"
+      />
+    </picture>
+  </StickyTextImageSection>
+
+
+<ThreeColumnTextSection>
+    <div slot="column-1-body">
+      <h2>Settle and Soothe</h2>
+      <p>This is our most popular package. 
+      Taking time to reflect and still the mind can have massive benefits to your working day.
+      </p>
+    </div>
+    <Button  href="/company/coming-soon" slot="column-1-cta" outlined>Learn More</Button>      
+    </div> 
+    <div slot="column-2-body">
+      <h2>Introduction to Mindfulness </h2>
+      <p>
+      A variety of practises to support settling the mind
+      Short take home techniques and guided practise that can be used at work, home or anywhere
+deeply nourishing body scan practise.
+    </div>
+   <Button  href="/company/coming-soon" slot="column-2-cta" outlined>Learn More</Button>      
+    <div slot="column-3-body">
+      <h2>POP up - 3 mini events</h2>
+      <p>
+       but run 3 individual 30 minute sessions. This would allow the club to offer mindfulness to your clients on a rolling 1 hour 30 minute space. So include as above but rather than one long event break it up into 3 separate classes. 
+      </p>
+    </div>
+   <Button  href="/company/coming-soon" slot="column-3-cta" outlined>Learn More</Button>      
+    </div>
+  </ThreeColumnTextSection>
+</Layout>

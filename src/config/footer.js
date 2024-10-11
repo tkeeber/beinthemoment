@@ -28,6 +28,10 @@ export const footerLists = [
         title: "Contact",
         slug: "/company/contact",
       },
+      {
+        title: "For Business",
+        slug: "/company/for-businesses",
+      },
     ],
   },
 ];

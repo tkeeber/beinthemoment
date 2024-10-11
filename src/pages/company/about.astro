@@ -1,50 +1,47 @@
 ---
-import ContactForm from "../../components/forms/ContactForm.astro";
+import { TextSection } from "@components/odyssey-theme";
 import Layout from "../../layouts/Page.astro";
-import { Container } from "@components/odyssey-theme";
+import HeroSection from "../../components/sections/heros/HeroSection.astro";
 
 const seo = {
-  title: "Contact | Be In the Moment",
-  description: "Contact Page",
+  title: "About Me | Be In The Moment",
+  description: "About Me",
 };
 ---
 
 <Layout {seo}>
-  <Container>
-    <section class="contact-hero__section">
-      <div class="contact-hero__text-section">
-        <h1>Thankyou for your interest</h1>
-        <p>
-      Please check back here soon for more info
-		</p>
-    </section>
-  </Container>
+  <HeroSection>
+    <div slot="text-container">
+      <h1>My Story</h1>
+      <p>Hello! I am Kimberley.</p><p>
+        I moved to Leicester 6 years ago, to be closer to family. I am a mum to
+        2 girls, who certainly keep me on my toes and remind me daily of the
+        simple pleasures in life. <br />
+      </p><p>
+        I have practised mindfulness for the past 12 years, and found this
+        incredibly helpful in managing my own well being.
+      <p> I am a qualified mindfulness teacher and member of Mindfulness Based Living Assoication  
+      </p><p>
+        I have worked in child mental health for 20 years, in a variety of both
+        community and school settings. I found myself using mindfulness
+        techniques regularly to support young people with a variety of mental
+        health needs.
+      </p><p>
+        I found myself feeling increasingly overwhelmed, anxious and spinning
+        far too many plates. I decided to begin adult mindfulness training. I
+        have found this immensely helpful and am excited to share mindfulness
+        with you.
+      </p>
+    </div>
+    <picture slot="image-container">
+      <img
+        src="/assets/images/kimberley-mystory.jpeg"
+        alt="Astro Odyssee"
+        id="home-hero-image"
+      />
+    </picture>
+  </HeroSection>
+  <TextSection narrow>
+    <p></p>
+  </TextSection>
 </Layout>
-
-<style>
-  .contact-hero__section {
-    margin: var(--section-margin) auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    min-height: calc(90vh - var(--navbar-height));
-    gap: 3rem;
-  }
-  .contact-hero__text-section {
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: var(--theme-surface-1);
-    border-radius: var(--theme-shape-radius);
-  }
-  .col-2__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  @media (max-width: 768px) {
-    .contact-hero__section {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>
